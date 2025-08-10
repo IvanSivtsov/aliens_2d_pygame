@@ -7,6 +7,7 @@ class AlienInvasion:
     def __init__(self):
         """Init of game and game`s resources"""
         pygame.init()
+        self.bg_color = (15, 14, 48) #cosmos BG color
         self.clock = pygame.time.Clock()
 
         self.screen = pygame.display.set_mode((1920, 1080))
@@ -20,6 +21,8 @@ class AlienInvasion:
                 if event.type == pygame.QUIT:
                     sys.exit()
             
+            self.screen.fill(self.bg_color)
+
             #Display of last draw screen
             pygame.display.flip()
             self.clock.tick(60)
